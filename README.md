@@ -50,8 +50,8 @@ ShadowsocksR-libev-full for OpenWrt
    apt-get install libstdc++6-4.7-dev libstdc++6
    
    # 下载lede-SDK，以ramips为例
-   wget https://downloads.lede-project.org/releases/17.01.1/targets/ramips/mt7620/lede-sdk-17.01.1-ramips-mt7620_gcc-5.4.0_musl-1.1.16.Linux-x86_64.tar.xz
-   tar xf lede-sdk-17.01.1-ramips-mt7620_gcc-5.4.0_musl-1.1.16.Linux-x86_64.tar.xz
+   wget https://downloads.lede-project.org/releases/17.01.2/targets/ramips/mt7620/lede-sdk-17.01.2-ramips-mt7620_gcc-5.4.0_musl-1.1.16.Linux-x86_64.tar.xz
+   tar xf lede-sdk-17.01.2-ramips-mt7620_gcc-5.4.0_musl-1.1.16.Linux-x86_64.tar.xz
    cd lede-sdk-*
    
    # 一些杂七杂八的坑
@@ -61,7 +61,7 @@ ShadowsocksR-libev-full for OpenWrt
    wget -P package/feeds/base/mbedtls/patches https://github.com/bettermanbao/lede/raw/lede-17.01.2/package/libs/mbedtls/patches/999-tweak-config-for-shadowsocks.patch
    
    # git clone openwrt-shadowsocksR-libev-full
-   git clone https://github.com/bettermanbao/openwrt-shadowsocksR-libev-full.git package/shadowsocksR-libev-full
+   git clone -b master https://github.com/bettermanbao/openwrt-shadowsocksR-libev-full.git package/shadowsocksR-libev-full
    
    # 选择要编译的包 Network -> shadowsocksr-libev
    make menuconfig
